@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    color-scheme: light ;
+
+    --font-sans: "Inter", sans-serif;
+
+    --b: #000;
+    --w: #fff;
+    --cp: #7a86b8;
+    --cs: #4f5b93;
+}
+
+body{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--cs);
+    border-radius: 8px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+img{
+    border-radius: 8px;
+}
+
+hgroup{
+    text-align: center;
+}
