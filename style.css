@@ -14,11 +14,12 @@
     --black: #000;
     --white: #fff;
     --dark: #161616;
+    --brand: #ee171f;
 }
 
 body{
     width: 100%;
-    height: 100dvh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,7 +88,7 @@ strong{
 main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 1.5rem;
 }
 
 section{
@@ -108,6 +109,26 @@ canvas{
     display: none;
 }
 
+svg{
+    transition: .15s ease-in;
+}
+
+.link{
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+    transition: .15s ease-in;
+
+    &:hover {
+        color: var(--brand);
+
+        svg{
+            transform: translateX(3px);
+        }
+    }
+}
+
 .col{
     width: 100%;
     height: 100%;
@@ -115,6 +136,26 @@ canvas{
 
 .poster{
     width: 350px;
+}
+
+.description{
+    width: 40ch;
+    font-size: 16px;
+}
+
+.my{
+    margin: .5rem 0;
+}
+
+.flex{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.gap-md{
+    gap: .8rem;
 }
 
 .gradient{
@@ -133,14 +174,13 @@ canvas{
     z-index: -5;
 }
 
-@media (width <= 756px) {
+@media (width <= 768px) {
     body{
-        padding: 1.5rem;
+        padding: 3rem 1.5rem;
     }
 
     main{
         grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
     hgroup{
@@ -148,7 +188,18 @@ canvas{
         text-align: center;
     }
 
+    h1{
+        font-size: 2.7rem;
+    }
+
     .poster{
         width: 200px;
+    }
+}
+
+@media (width <= 600px) {
+    .description{
+        width: 100%;
+        text-align: center;
     }
 }
