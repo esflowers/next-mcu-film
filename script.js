@@ -11,7 +11,7 @@ img.onload = () => {
     const imageData = ctx.getImageData(0, 0, img.width, img.height)
     const pixels = imageData.data
     const color = getDominantColor(pixels, img.width, img.height)
-    gradient.style.background = `rgba(${color.r}, ${color.g}, ${color.b}, 0.7)`
+    gradient.style.background = `rgba(${color.r}, ${color.g}, ${color.b}, 0.5)`
 }
 
 function getDominantColor(data, width, height) {
