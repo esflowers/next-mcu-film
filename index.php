@@ -22,8 +22,21 @@
         <hgroup class="col">
             <h1><?= $movie["title"]; ?></h1>
             <h5><?= $next_movie->get_until_messages(); ?></h5>
-            <p>Fecha de estreno: <?= $movie["release_date"]; ?></p>
-            <p><small>El siguiente estreno es <?= $movie["following_production"]; ?></small></p>
+            <div class="flex gap-md my">
+                <div class="flex">
+                    <?php render_template('iconCalendar') ?>
+                    <small><?= $movie["release_date"]; ?></small>
+                </div>
+                <div class="flex">
+                    <?php render_template('iconMovie') ?>
+                    <small><?= $movie["type"]; ?></small>
+                </div>
+            </div>
+            <p class="description my"><?= $movie["overview"]; ?></p>
+            <!-- <a href="#" class="flex my link">
+                Next premiere 
+                <?php render_template('iconArrow') ?>
+            </a> -->
         </hgroup>
     </main>
 
