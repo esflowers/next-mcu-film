@@ -23,25 +23,25 @@
             <h1><?= $movie["title"]; ?></h1>
             <h5><?= $next_movie->get_until_messages(); ?></h5>
             <div class="flex gap-md my">
-                <div class="flex">
+                <div class="flex" title="Premiere">
                     <?php render_template('iconCalendar') ?>
                     <small><?= $movie["release_date"]; ?></small>
                 </div>
-                <div class="flex">
+                <div class="flex" title="Type">
                     <?php render_template('iconMovie') ?>
                     <small><?= $movie["type"]; ?></small>
                 </div>
             </div>
             <p class="description my"><?= $movie["overview"]; ?></p>
-            <!-- <a href="#" class="flex my link">
+            <a href="#" class="flex my link">
                 Next premiere 
                 <?php render_template('iconArrow') ?>
-            </a> -->
+            </a>
         </hgroup>
     </main>
 
     <canvas id="canvas"></canvas>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
