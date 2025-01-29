@@ -1,6 +1,6 @@
 <?php
-    require_once './functions.php';
-    require_once './classes/NextMovie.php';
+    require_once 'functions.php';
+    require_once 'classes/NextMovie.php';
 
     $next_movie = NextMovie::fetch_and_create_movie(API_URL);
     $movie = $next_movie->get_data();
