@@ -3,9 +3,9 @@
 
     class NextMovie{
         private int $days_until;
-        private string $title, $following_production, $release_date, $poster_url, $overview;
+        private string $title, $following_production, $release_date, $poster_url, $overview, $type;
 
-        public function __construct($days_until, $title, $following_production, $release_date, $poster_url, $overview)
+        public function __construct($days_until, $title, $following_production, $release_date, $poster_url, $overview, $type)
         {
             $this->days_until = $days_until;
             $this->title = $title;
@@ -13,16 +13,17 @@
             $this->release_date = $release_date;
             $this->poster_url = $poster_url;
             $this->overview = $overview;
+            $this->type = $type;
         }
 
         public function get_until_messages() : string{
             $days = $this->days_until;
             return match(true){
-                $days === 0 => 'Se estrena hoy',
-                $days == 1  => 'Mañana es el estreno',
-                $days < 7   => 'Se estrena esta semana',
-                $days < 30  => "Se estrena este mes, en $days días",
-                default     => "Se estrena en $days días",
+                $days === 0 => 'It opens today!!',
+                $days == 1  => 'Tomorrow is the premiere!',
+                $days < 7   => 'It premieres this week',
+                $days < 30  => "It opens this month, in $days days",
+                default     => "Releases in $days days",
             };
         }
 
@@ -37,6 +38,7 @@
                 $data["release_date"],
                 $data["poster_url"],
                 $data["overview"],
+                $data["type"]
             );
         }
 
