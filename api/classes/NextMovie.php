@@ -3,7 +3,8 @@
 
     class NextMovie{
         private int $days_until;
-        private string $title, $following_production, $release_date, $poster_url, $overview, $type;
+        private string $title, $release_date, $poster_url, $overview, $type;
+        private array $following_production;
 
         public function __construct($days_until, $title, $following_production, $release_date, $poster_url, $overview, $type)
         {
@@ -34,7 +35,7 @@
             return new self(
                 $data["days_until"],
                 $data["title"],
-                $data["following_production"]["title"] ?? "Desconocido",
+                $data["following_production"] ?? [],
                 $data["release_date"],
                 $data["poster_url"],
                 $data["overview"],
@@ -44,6 +45,20 @@
 
         public function get_data(){
             return get_object_vars($this);
+        }
+
+        public function get_following_production(int $steps = 1): array {
+            $next = $this->following_production;
+
+            for ($i = 1; $i < $steps; $i++) {
+                if (isset($next["following_production"])) {
+                    $next = $next["following_production"];
+                } else {
+                    break;
+                }
+            }
+
+            return $next;
         }
     }
 ?>

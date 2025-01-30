@@ -3,7 +3,13 @@
     require_once 'classes/NextMovie.php';
 
     $next_movie = NextMovie::fetch_and_create_movie(API_URL);
-    $movie = $next_movie->get_data();
+    $steps = isset($_GET["next"]) ? (int) $_GET["next"] : 0;
+    
+    if ($steps > 0) {
+        $movie = $next_movie->get_following_production($steps);
+    } else {
+        $movie = $next_movie->get_data();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +39,7 @@
                 </div>
             </div>
             <p class="description my"><?= $movie["overview"]; ?></p>
-            <a href="#" class="flex my link">
+            <a href="?next=<?= $steps + 1 ?>" class="flex my link">
                 Next premiere 
                 <?php render_template('iconArrow') ?>
             </a>
