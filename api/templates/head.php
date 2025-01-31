@@ -15,6 +15,8 @@
     <meta property="twitter:title" content="<?= $title; ?> - When is the next MCU film" />
     <meta property="twitter:description" content="<?= $overview ?>" />
     <meta property="twitter:image" content="<?= $poster_url ?>" />
-    <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Inter" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Inter" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
