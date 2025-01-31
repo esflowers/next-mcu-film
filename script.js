@@ -1,6 +1,7 @@
 const $ = e => document.querySelector(e)
 const img = $('.poster')
 const gradient = $('.gradient')
+const btnPrev = $('#previous')
 const canvas = $('#canvas')
 const ctx = canvas.getContext('2d')
 
@@ -41,3 +42,7 @@ function getDominantColor(data, width, height) {
 
     return dominantColor
 }
+
+btnPrev.addEventListener('click', () => {
+    history.back()
+})
