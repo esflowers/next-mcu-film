@@ -43,6 +43,8 @@ function getDominantColor(data, width, height) {
     return dominantColor
 }
 
-btnPrev.addEventListener('click', () => {
-    history.back()
-})
+if (btnPrev) {
+    btnPrev.addEventListener('click', () => {
+        history.back()
+    })
+}
