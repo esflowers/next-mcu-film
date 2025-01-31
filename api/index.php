@@ -21,7 +21,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php render_template('head', ["title" => $movie["title"]]); ?>
+<?php render_template('head', ["title" => $movie["title"], "overview" => $movie["overview"], "poster_url" => $movie["poster_url"]]); ?>
 
 <body>
     <div class="gradient"></div>
