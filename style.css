@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Inter');
-
 *,
 *::after,
 *::before{
@@ -27,6 +25,7 @@ body{
     padding: 3rem;
     color: var(--dark);
     background: var(--white);
+    font-display: swap;
 }
 
 ::-webkit-scrollbar{
@@ -49,26 +48,10 @@ h1{
 }
 
 h2{
-    font-size: 2.5rem;
-}
-
-h3{
-    font-size: 2.1rem;
-}
-
-h4{
-    font-size: 1.7rem;
-}
-
-h5{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-family: var(--font-headline);
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-h6{
-    font-size: 1.2rem;
 }
 
 p{
@@ -116,15 +99,35 @@ svg{
 .link{
     font-size: 15px;
     font-weight: 700;
+    font-family: var(--font-text);
     color: var(--black);
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
     text-decoration: none;
     transition: .15s ease-in;
 
-    &:hover {
+    &.prev{
+        svg{
+            transform: rotate(180deg)
+        }
+    }
+
+    &:hover{
         color: var(--brand);
 
-        svg{
-            transform: translateX(3px);
+        &.next{
+            svg{
+                transform: translateX(3px);
+            }
+        }
+
+        &.prev{
+            svg{
+                transform: rotate(180deg) translateX(3px);
+            }
         }
     }
 }
@@ -136,6 +139,7 @@ svg{
 
 .poster{
     width: 350px;
+    height: auto;
 }
 
 .description{
