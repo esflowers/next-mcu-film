@@ -93,6 +93,7 @@ canvas{
 }
 
 svg{
+    transition-property: transform;
     transition: .15s ease-in;
 }
 
@@ -155,7 +156,7 @@ svg{
     height: fit-content;
     display: flex;
     align-items: center;
-    gap: .4rem;
+    gap: .2rem;
 }
 
 .gap-md{
