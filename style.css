@@ -159,6 +159,11 @@ svg{
     gap: .2rem;
 }
 
+.between{
+    width: 100%;
+    justify-content: space-between;
+}
+
 .gap-md{
     gap: .8rem;
 }
