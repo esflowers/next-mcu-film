@@ -49,12 +49,12 @@
                 <?php if ($steps > 0): ?>
                     <button id="previous" class="flex my link prev">
                         <?php render_template('iconArrow') ?>
-                        Previous premiere
+                        Previous
                     </button>
                 <?php endif; ?>
                 <?php if (!empty($movie["following_production"])): ?>
                     <a href="?next=<?= $steps + 1 ?>&date=<?= $movie["release_date"] ?>" class="flex my link next">
-                        Next premiere
+                        Next
                         <?php render_template('iconArrow') ?>
                     </a>
                 <?php endif; ?>
