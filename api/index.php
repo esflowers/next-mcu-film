@@ -45,7 +45,7 @@
                 </div>
             </div>
             <p class="description my"><?= $movie["overview"]; ?></p>
-            <div class="flex gap-md">
+            <div class="flex between gap-md">
                 <?php if ($steps > 0): ?>
                     <button id="previous" class="flex my link prev">
                         <?php render_template('iconArrow') ?>
