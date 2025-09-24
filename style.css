@@ -152,6 +152,10 @@ svg{
     margin: .5rem 0;
 }
 
+.ml-auto {
+    margin-left: auto;
+}
+
 .flex{
     height: fit-content;
     display: flex;

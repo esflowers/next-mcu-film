@@ -54,7 +54,7 @@
                     </button>
                 <?php endif; ?>
                 <?php if (!empty($movie["following_production"])): ?>
-                    <a href="?next=<?= $steps + 1 ?>&date=<?= $movie["release_date"] ?>" class="flex my link next">
+                    <a href="?next=<?= $steps + 1 ?>&date=<?= $movie["release_date"] ?>" class="flex ml-auto my link next">
                         Next
                         <?php render_template('iconArrow') ?>
                     </a>
