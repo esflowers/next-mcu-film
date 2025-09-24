@@ -33,7 +33,7 @@ body{
 }
 
 /* Text */
-h1, h2, h3, h4, h5, h6{
+h1, h2 {
     line-height: 1.15;
     font-weight: 700;
     margin-bottom: .5rem;
@@ -55,13 +55,16 @@ h2{
 }
 
 p{
+    width: 40ch;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.6;
 }
 
 small{
     font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: -1px;
 }
 
 strong{
@@ -98,16 +101,18 @@ svg{
 }
 
 .link{
-    font-size: 15px;
+    font-size: 0.9rem;
     font-weight: 700;
     font-family: var(--font-text);
-    color: var(--black);
+    color: var(--dark);
     background: transparent;
     border: none;
     outline: none;
     padding: 0;
     cursor: pointer;
+    letter-spacing: -1px;
     text-decoration: none;
+    text-transform: uppercase;
     transition: .15s ease-in;
 
     &.prev{
@@ -141,11 +146,6 @@ svg{
 .poster{
     width: 350px;
     height: auto;
-}
-
-.description{
-    width: 40ch;
-    font-size: 16px;
 }
 
 .my{

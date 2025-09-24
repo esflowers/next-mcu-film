@@ -44,7 +44,8 @@
                     <small><?= $movie["type"]; ?></small>
                 </div>
             </div>
-            <p class="description my"><?= $movie["overview"]; ?></p>
+            <p class="my"><?= $movie["overview"]; ?></p>
+            <br>
             <div class="flex between gap-md">
                 <?php if ($steps > 0): ?>
                     <button id="previous" class="flex my link prev">
