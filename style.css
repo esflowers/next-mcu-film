@@ -152,7 +152,7 @@ svg{
     margin: .5rem 0;
 }
 
-.ml-auto {
+.ml-auto{
     margin-left: auto;
 }
 
@@ -212,7 +212,7 @@ svg{
 }
 
 @media (width <= 600px) {
-    .description{
+    p{
         width: 100%;
         text-align: center;
     }
