@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title; ?> - The next MCU film</title>
-    <link rel="shortcut icon" href="../favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
     <meta name="title" content="<?= $title; ?> - The next MCU film" />
     <meta name="description" content="<?= $overview ?>" />
     <meta property="og:type" content="website" />
@@ -16,5 +16,5 @@
     <meta property="twitter:description" content="<?= $overview ?>" />
     <meta property="twitter:image" content="<?= $poster_url ?>" />
     <meta name="theme-color" content="#ee171f">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
