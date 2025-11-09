@@ -28,7 +28,7 @@
 
     <main>
         <section class="col">
-            <img id="poster" class="poster" src="proxy.php?url=<?= urlencode($movie["poster_url"]) ?>" alt="<?= "The next MCU film is " . $movie["title"]; ?>" crossorigin="anonymous" width="350" height="380" loading="lazy">
+            <img id="poster" class="poster" src="./proxy.php?url=<?= urlencode($movie["poster_url"]) ?>" alt="<?= "The next MCU film is " . $movie["title"]; ?>" crossorigin="anonymous" width="350" height="380" loading="lazy">
         </section>
 
         <hgroup class="col">
