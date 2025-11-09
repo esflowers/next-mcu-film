@@ -28,7 +28,7 @@
 
     <main>
         <section class="col">
-            <img id="poster" class="poster" src="./proxy.php?url=<?= urlencode($movie["poster_url"]) ?>" alt="<?= "The next MCU film is " . $movie["title"]; ?>" crossorigin="anonymous" width="350" height="380" loading="lazy">
+            <img id="poster" class="poster" src="<?= $movie["poster_url"] ?>" alt="<?= "The next MCU film is " . $movie["title"]; ?>" crossorigin="anonymous" width="350" height="380" loading="lazy">
         </section>
 
         <hgroup class="col">
@@ -43,9 +43,9 @@
                     <?php render_template('iconMovie') ?>
                     <?= $movie["type"]; ?>
                 </div>
-                <button id="download" class="badge" title="Download Poster">
-                    <?php render_template('iconDownload') ?>
-                    Download
+                <button id="share" class="badge" title="Copy Link">
+                    <?php render_template('iconLink') ?>
+                    Share
                 </button>
             </div>
             <p class="my"><?= $movie["overview"]; ?></p>
@@ -53,14 +53,14 @@
             <div class="flex between gap-md">
                 <?php if ($steps > 0): ?>
                     <button id="previous" class="flex my link prev">
-                        <?php render_template('iconArrow') ?>
+                        <?php render_template('iconChevron') ?>
                         Previous
                     </button>
                 <?php endif; ?>
                 <?php if (!empty($movie["following_production"])): ?>
                     <a href="?next=<?= $steps + 1 ?>&date=<?= $movie["release_date"] ?>" class="flex ml-auto my link next">
                         Next
-                        <?php render_template('iconArrow') ?>
+                        <?php render_template('iconChevron') ?>
                     </a>
                 <?php endif; ?>
             </div>
