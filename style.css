@@ -7,8 +7,9 @@
 }
 
 :root{
-    --font-headline: "Bebas Neue", sans-serif;
-    --font-text: "Inter", sans-serif;
+    --font-display: "Bebas Neue", sans-serif;
+    --font-sans: "Inter Tight", sans-serif;
+    --font-mono: "Geist Mono", monospace;
     --black: #000;
     --white: #fff;
     --dark: #161616;
@@ -21,7 +22,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-text);
+    font-family: var(--font-sans);
     padding: 3rem;
     color: var(--dark);
     background: var(--white);
@@ -42,14 +43,14 @@ h1, h2 {
 h1{
     font-size: 3rem;
     font-weight: 900;
-    font-family: var(--font-headline);
+    font-family: var(--font-display);
     color: var(--black);
     width: 15ch;
 }
 
 h2{
     font-size: 1.5rem;
-    font-family: var(--font-headline);
+    font-family: var(--font-display);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -103,7 +104,7 @@ svg{
 .link{
     font-size: 0.9rem;
     font-weight: 700;
-    font-family: var(--font-text);
+    font-family: var(--font-sans);
     color: var(--dark);
     background: transparent;
     border: none;
