@@ -112,7 +112,6 @@ svg{
     font-size: 0.9rem;
     font-weight: 700;
     font-family: var(--font-sans);
-    letter-spacing: -1px;
     color: var(--secondary);
     background: transparent;
     border: none;
