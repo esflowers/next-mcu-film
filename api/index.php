@@ -28,21 +28,25 @@
 
     <main>
         <section class="col">
-            <img class="poster" src="<?= $movie["poster_url"] ?>" alt="<?= "The next MCU film is " . $movie["title"]; ?>" crossorigin="anonymous" width="350" height="380" loading="lazy">
+            <img id="poster" class="poster" src="./proxy.php?url=<?= urlencode($movie["poster_url"]) ?>" alt="<?= "The next MCU film is " . $movie["title"]; ?>" crossorigin="anonymous" width="350" height="380" loading="lazy">
         </section>
 
         <hgroup class="col">
             <h1><?= $movie["title"]; ?></h1>
             <h2><?= $next_movie->get_until_messages(); ?></h2>
-            <div class="flex gap-md my">
-                <div class="tag" title="Premiere">
+            <div class="flex flex-wrap gap-md my">
+                <div class="badge" title="Premiere">
                     <?php render_template('iconCalendar') ?>
-                    <small><?= $movie["release_date"]; ?></small>
+                    <?= $movie["release_date"]; ?>
                 </div>
-                <div class="tag" title="Type">
+                <div class="badge" title="Type">
                     <?php render_template('iconMovie') ?>
-                    <small><?= $movie["type"]; ?></small>
+                    <?= $movie["type"]; ?>
                 </div>
+                <button id="download" class="badge" title="Download Poster">
+                    <?php render_template('iconDownload') ?>
+                    Download
+                </button>
             </div>
             <p class="my"><?= $movie["overview"]; ?></p>
             <br>
@@ -65,6 +69,6 @@
 
     <canvas id="canvas"></canvas>
 
-    <script src="./script.js" defer></script>
+    <script src="../script.js" defer></script>
 </body>
 </html>

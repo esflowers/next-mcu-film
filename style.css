@@ -64,12 +64,6 @@ p{
     line-height: 1.6;
 }
 
-small{
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    font-weight: 500;
-}
-
 main{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -99,11 +93,27 @@ svg{
     transition: .15s ease-in;
 }
 
-.tag {
+button {
+    cursor: pointer;
+    color: var(--secondary);
+    transition: .15s ease-in;
+
+    &:hover {
+        color: var(--brand);
+    }
+}
+
+.badge {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: .3rem;
+    background: none;
+    outline: none;
+    border: none;
     text-transform: uppercase;
     user-select: none;
 }
@@ -168,6 +178,10 @@ svg{
     display: flex;
     align-items: center;
     gap: .2rem;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
 }
 
 .between{
