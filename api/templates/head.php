@@ -15,6 +15,5 @@
     <meta property="twitter:title" content="<?= $title; ?> - The next MCU film" />
     <meta property="twitter:description" content="<?= $overview ?>" />
     <meta property="twitter:image" content="<?= $poster_url ?>" />
-    <meta name="theme-color" content="#ee171f">
     <link rel="stylesheet" href="./style.css">
 </head>
