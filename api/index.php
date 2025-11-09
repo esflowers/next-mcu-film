@@ -35,11 +35,11 @@
             <h1><?= $movie["title"]; ?></h1>
             <h2><?= $next_movie->get_until_messages(); ?></h2>
             <div class="flex gap-md my">
-                <div class="flex" title="Premiere">
+                <div class="tag" title="Premiere">
                     <?php render_template('iconCalendar') ?>
                     <small><?= $movie["release_date"]; ?></small>
                 </div>
-                <div class="flex" title="Type">
+                <div class="tag" title="Type">
                     <?php render_template('iconMovie') ?>
                     <small><?= $movie["type"]; ?></small>
                 </div>
