@@ -128,7 +128,7 @@ button {
 
 .link{
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 600;
     font-family: var(--font-sans);
     color: var(--secondary);
     background: transparent;
@@ -138,6 +138,7 @@ button {
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: -1px;
     user-select: none;
     transition: .15s ease-in;
 
