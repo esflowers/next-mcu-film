@@ -103,9 +103,9 @@ button {
 }
 
 .badge {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 550;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,6 +129,7 @@ button {
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
+    user-select: none;
     transition: .15s ease-in;
 
     &.prev{
