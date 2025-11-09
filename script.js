@@ -2,7 +2,8 @@ const $ = e => document.querySelector(e)
 const img = $('#poster')
 const gradient = $('.gradient')
 const btnPrev = $('#previous')
-const btnDownload = $('#download')
+const btnShare = $('#share')
+const originalShareText = btnShare.innerHTML
 const canvas = $('#canvas')
 const ctx = canvas.getContext('2d')
 
@@ -14,21 +15,6 @@ img.onload = () => {
     const pixels = imageData.data
     const color = getDominantColor(pixels, img.width, img.height)
     gradient.style.background = `rgba(${color.r}, ${color.g}, ${color.b}, 0.5)`
-
-    btnDownload.addEventListener('click', async () => {
-        try {
-            const response = await fetch(img.src, {mode: 'cors'})
-            const blob = await response.blob()
-            const url = URL.createObjectURL(blob)
-            const a = document.createElement('a')
-            a.href = url
-            a.download = 'Next MCU Movie.png'
-            a.click()
-            URL.revokeObjectURL(url)
-        } catch (error) {
-            alert('Error downloading the poster.')
-        }
-    })
 }
 
 function getDominantColor(data, width, height) {
@@ -64,3 +50,19 @@ if (btnPrev) {
         history.back()
     })
 }
+
+btnShare.addEventListener('click', async () => {
+    try {
+        await navigator.clipboard.writeText(window.location.href)
+        btnShare.textContent = 'Link Copied!'
+        setTimeout(() => {
+            btnShare.innerHTML = originalShareText
+        }, 2000)
+    } catch (error) {
+        console.error('Failed to copy: ', error)
+        btnShare.textContent = 'Error Copying'
+        setTimeout(() => {
+            btnShare.innerHTML = originalShareText
+        }, 2000)
+    }
+})
