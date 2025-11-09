@@ -69,6 +69,6 @@
 
     <canvas id="canvas"></canvas>
 
-    <script src="../script.js" defer></script>
+    <script src="./script.js" defer></script>
 </body>
 </html>

@@ -36,7 +36,6 @@ body{
 }
 
 h1, h2 {
-    line-height: 1.15;
     font-weight: 700;
     margin-bottom: .5rem;
 }
@@ -99,7 +98,7 @@ button {
     transition: .15s ease-in;
 
     &:hover {
-        color: var(--brand);
+        opacity: .8;
     }
 }
 
